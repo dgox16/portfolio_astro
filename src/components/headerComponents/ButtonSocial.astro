@@ -1,0 +1,14 @@
+---
+import { Icon } from "astro-icon/components";
+
+const { url, icon } = Astro.props;
+---
+
+<a
+    target="_blank"
+    href={url}
+    rel="noopener noreferrer"
+    class="m-auto size-10 hover:scale-105 transition duration-150 xs:size-12 rounded-xl flex justify-center text-latte-text dark:text-mocha-text items-center bg-latte-crust dark:bg-mocha-crust border-2 border-latte-text dark:border-mocha-text"
+>
+    <Icon name={icon} class="size-5" />
+</a>

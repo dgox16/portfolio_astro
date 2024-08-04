@@ -2,6 +2,7 @@
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import TextTitleHeader from "./TextTitleHeader.astro";
 import TextTitleGradientHeader from "./TextTitleGradientHeader.astro";
+import ButtonsHeader from "./ButtonsHeader.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -28,7 +29,7 @@ const t = useTranslations(lang);
             >
                 {t("header.description")}
             </p>
-            <!--<HeaderButtons />-->
+            <ButtonsHeader />
         </div>
         <div
             class="flex justify-center lg:justify-normal col-span-1 lg:col-span-2 order-first lg:order-last"

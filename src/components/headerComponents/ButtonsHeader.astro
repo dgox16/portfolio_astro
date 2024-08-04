@@ -1,0 +1,53 @@
+---
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import { Icon } from "astro-icon/components";
+import ButtonSocial from "./ButtonSocial.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const socials = [
+    {
+        url: "https://github.com/dgox16",
+        icon: "github",
+    },
+    {
+        url: "mailto:dgox16@gmail.com",
+        icon: "email",
+    },
+    {
+        url: "https://www.linkedin.com/in/diego-gomez-0b7448270/",
+        icon: "linkedin",
+    },
+    {
+        url: "https://wa.me/524451312061",
+        icon: "whatsapp",
+    },
+];
+---
+
+<div class="gap-0 lg:gap-2 xl:gap-4 grid grid-cols-1 lg:grid-cols-9 mt-5">
+    <div class="flex justify-center lg:justify-normal col-span-2">
+        <button
+            type="button"
+            class="w-[90%] lg:w-full text-latte-base dark:text-mocha-base hover:scale-105 transition duration-150 flex items-center justify-center font-display text-xl font-bold rounded-xl h-10 xs:h-12 bg-gradient-to-tr from-latte-blue via-latte-mauve to-latte-pink dark:from-mocha-blue dark:via-mocha-mauve dark:to-mocha-pink"
+        >
+            <Icon name="fileDownload" class="size-5 mr-1" />
+            <p class="text-[15px] lg:text-[13px] xl:text-[15px]">
+                {t("header.buttonCV")}
+            </p>
+        </button>
+    </div>
+
+    <div class="flex justify-center lg:justify-normal col-span-7 mt-4 lg:mt-0">
+        <div
+            class="lg:gap-14 grid grid-cols-4 justify-center lg:justify-normal w-4/5 lg:w-1/4"
+        >
+            {
+                socials.map(({ url, icon }) => (
+                    <ButtonSocial icon={icon} url={url} />
+                ))
+            }
+        </div>
+    </div>
+</div>

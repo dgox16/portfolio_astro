@@ -1,8 +1,15 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
 	darkMode: "class",
 	theme: {
+		screens: {
+			xss: "360px",
+			xs: "393px",
+			...defaultTheme.screens,
+		},
 		extend: {
 			margin: {
 				"80px": "80px",
