@@ -1,5 +1,7 @@
 ---
 import { getLangFromUrl } from "../../i18n/utils";
+import TitleSection from "../TitleSection.astro";
+import ItemExperience from "./ItemExperience.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const inSpanish = lang === "es";
@@ -37,3 +39,13 @@ const experience = [
     },
 ];
 ---
+
+<div class="flex justify-center items-center mx-7 xl:mx-0" id="experience">
+    <div class="w-full md:w-recommend">
+        <TitleSection color={"green"}
+            >{inSpanish ? "Experiencia" : "Experience"}</TitleSection
+        >
+        <div class="my-0 lg:my-5"></div>
+        {experience.map((item) => <ItemExperience item={item} />)}
+    </div>
+</div>

@@ -1,0 +1,72 @@
+---
+const { item } = Astro.props;
+---
+
+<div class="block min-[850px]:hidden">
+    <div class="flex justify-center">
+        <div
+            class="bg-latte-green dark:bg-mocha-green rounded-3xl py-2 px-4 sm:px-6 my-4 w-fit"
+        >
+            <p
+                class="text-[13px] xs:text-[14px] md:text-[19px] font-medium text-latte-crust dark:text-mocha-crust"
+            >
+                {item.date}
+            </p>
+        </div>
+    </div>
+    <div class="flex justify-center">
+        <div
+            class="bg-latte-mantle dark:bg-mocha-mantle p-5 sm:p-6 md:p-8 rounded-2xl"
+        >
+            <p
+                class="uppercase text-[19px]/[18px] xss:text-[20px]/[20px] xs:text-[22px]/[22px] sm:text-[24px] md:text-[30px] font-bold text-latte-text dark:text-mocha-text text-center text-pretty"
+            >
+                {item.job}
+            </p>
+            <p
+                class="text-[14px] xss:text-[16px] xs:text-[17px] sm:text-[19px] md:text-[25px] font-medium text-latte-subtext1 dark:text-mocha-subtext1 mb-2 md:mb-4 text-center"
+            >
+                {item.company}
+            </p>
+            <p
+                class="text-[13px] xss:text-[13px] xs:text-[14px] sm:text-[15px] md:text-[17px] lg:text-[20px] text-latte-subtext1 dark:text-mocha-subtext1 text-pretty text-center"
+            >
+                {item.description}
+            </p>
+        </div>
+    </div>
+</div>
+
+<div
+    class="relative ml-12 pb-16 before:absolute before:left-[-35px] before:block before:h-full before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4] hidden min-[850px]:grid"
+>
+    <div class="relative pb-12 md:col-span-2">
+        <div class="sticky top-0">
+            <span
+                class="text-latte-green dark:text-mocha-green -left-[44px] absolute rounded-full text-6xl"
+            >
+                &bull;
+            </span>
+
+            <h3
+                class="text-xl font-bold text-latte-green dark:text-mocha-green"
+            >
+                {item.job}
+            </h3>
+            <h4
+                class="font-semibold text-xl text-latte-text dark:text-mocha-text"
+            >
+                {item.company}
+            </h4>
+            <time
+                class="p-0 m-0 text-sm text-latte-subtext1 dark:text-mocha-subtext1"
+                >{item.date}</time
+            >
+        </div>
+    </div>
+    <div
+        class="relative flex flex-col gap-2 pb-4 text-latte-text dark:text-mocha-text text-[17px]/[21px] md:col-span-3"
+    >
+        {item.description}
+    </div>
+</div>
