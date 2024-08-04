@@ -1,0 +1,33 @@
+---
+import Navbar from "../../components/navbarComponents/Navbar.astro";
+import { getLangFromUrl } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+---
+
+<!doctype html>
+<html lang={lang}>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Diego Armando Gómez Martínez" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Portfolio | Diego Armando</title>
+    </head>
+    <body class="bg-latte-base dark:bg-mocha-base">
+        <header>
+            <Navbar />
+        </header>
+    </body><style is:global>
+        html {
+            font-family:
+                "Onest Variable",
+                ui-sans-serif,
+                system-ui,
+                -apple-system,
+                "Apple Color Emoji",
+                "Noto Color Emoji";
+        }
+    </style>
+</html>
