@@ -1,0 +1,14 @@
+---
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+---
+
+<a
+    class="flex hover:scale-110 transition duration-150 justify-center rounded-xl text-text h-10 w-10 items-center font-semibold"
+    type="button"
+    title="ChangeLanguage"
+    href={lang == "es" ? "/" : "/es"}
+>
+    <p>{lang == "es" ? "ENG" : "ESP"}</p>
+</a>

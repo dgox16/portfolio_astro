@@ -1,6 +1,8 @@
 ---
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import ButtonTheme from "./ButtonTheme.astro";
+import ButtonLanguage from "./ButtonLanguage.astro";
+
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
@@ -52,7 +54,7 @@ const navItems = [
         </nav>
         <div class="flex flex-row">
             <ButtonTheme />
-            <!--<ButtonLanguage />-->
+            <ButtonLanguage />
         </div>
     </div>
 </header>
