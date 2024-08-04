@@ -18,6 +18,7 @@ export const ui = {
 		"header.description":
 			"I design and create functional and beautiful applications with passion and a focus on user experience and high quality.",
 		"header.buttonCV": "Download CV",
+		"title.aboutMe": "About Me",
 	},
 	es: {
 		"nav.home": "Portafolio",
@@ -31,5 +32,6 @@ export const ui = {
 		"header.description":
 			"Diseño y creo aplicaciones funcionales y hermosas con pasión y enfoque en la experiencia del usuario y la alta calidad.",
 		"header.buttonCV": "Descargar CV",
+		"title.aboutMe": "Sobre mí",
 	},
 } as const;

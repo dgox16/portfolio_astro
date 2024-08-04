@@ -1,0 +1,40 @@
+---
+import ParagraphAboutMe from "./ParagraphAboutMe.astro";
+import TextBoldAboutMe from "./TextBoldAboutMe.astro";
+
+import { getLangFromUrl} from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const inSpanish = lang === "es";
+---
+
+<ParagraphAboutMe>
+    {inSpanish ? (
+        <span>
+            Soy un <TextBoldAboutMe>Desarrollador Full Stack</TextBoldAboutMe> de 24 años de edad. Mi experiencia abarca tanto el desarrollo backend utilizando tecnologías como <TextBoldAboutMe>Django, Rust (con Axum), Supabase y Express JS</TextBoldAboutMe>, como el frontend con <TextBoldAboutMe>React, Astro, Tailwind CSS y HTML.</TextBoldAboutMe> Tanto en proyectos personales como en el ámbito laboral, he trabajado con bases de datos tanto relacionales (<TextBoldAboutMe>PostgreSQL, SQLite</TextBoldAboutMe>) como no relacionales (<TextBoldAboutMe>MongoDB</TextBoldAboutMe>).
+        </span>
+    ) : (
+        <span>
+            I am a 24-year-old <TextBoldAboutMe>Full Stack Developer.</TextBoldAboutMe> My experience spans both backend development using technologies such as <TextBoldAboutMe>Django, Rust (with Axum), Supabase, and Express JS</TextBoldAboutMe> as well as frontend with <TextBoldAboutMe>React, Astro, Tailwind CSS and HTML.</TextBoldAboutMe> In both personal projects and professional settings, I have worked with both relational databases (<TextBoldAboutMe>PostgreSQL, SQLite</TextBoldAboutMe>) and non-relational databases (<TextBoldAboutMe>MongoDB</TextBoldAboutMe>).
+        </span>
+    )}
+</ParagraphAboutMe>
+<br />
+<ParagraphAboutMe>
+    {inSpanish
+        ? "He desempeñado roles como Junior Full Stack y desarrollador backend en una empresa enfocada en servicios financieros de préstamos, además de haber creado páginas web como Freelancer."
+        : "I have worked in roles such as Junior Full Stack and backend developer at a company focused on financial loan services, in addition to having created websites as a freelancer."
+    }
+</ParagraphAboutMe>
+<br />
+<ParagraphAboutMe>
+    {inSpanish ? (
+        <span>
+            Además de mi experiencia laboral, cuento con una <TextBoldAboutMe>licenciatura en Ingeniería en Sistemas Computacionales</TextBoldAboutMe> de la Universidad de Guanajuato.
+        </span>
+    ) : (
+        <span>
+            In addition to my work experience, I hold a <TextBoldAboutMe>Bachelor's degree in Computer Systems Engineering</TextBoldAboutMe> from the University of Guanajuato.
+        </span>
+    )}
+</ParagraphAboutMe>

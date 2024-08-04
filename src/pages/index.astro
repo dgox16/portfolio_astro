@@ -1,6 +1,5 @@
 ---
-import Navbar from "../components/navbarComponents/Navbar.astro";
-import Header from "../components/headerComponents/Header.astro";
+import Body from "../components/Body.astro";
 import "@fontsource-variable/onest";
 import { getLangFromUrl } from "../i18n/utils";
 
@@ -17,12 +16,7 @@ const lang = getLangFromUrl(Astro.url);
         <meta name="generator" content={Astro.generator} />
         <title>Portfolio | Diego Armando</title>
     </head>
-    <body class="bg-latte-base dark:bg-mocha-base">
-        <header>
-            <Navbar />
-            <Header />
-        </header>
-    </body>
+    <Body />
     <style is:global>
         html {
             font-family:

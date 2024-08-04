@@ -1,0 +1,24 @@
+---
+import TitleSection from "../TitleSection.astro";
+import DescriptionAboutMe from "./DescriptionAboutMe.astro";
+import SvgAboutMe from "./SvgAboutMe.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div class="flex justify-center mx-7 xl:mx-0" id="about-me">
+    <div class="w-full lg:w-recommend">
+        <TitleSection color={"blue"}>{t("title.aboutMe")}</TitleSection>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3">
+            <SvgAboutMe />
+            <div
+                class="flex flex-col justify-center items-center lg:items-start col-span-2 lg:col-span-2 pl-0 lg:pl-6 text-latte-text dark:text-mocha-text"
+            >
+                <DescriptionAboutMe />
+            </div>
+        </div>
+    </div>
+</div>
