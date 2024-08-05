@@ -1,0 +1,23 @@
+---
+import { getLangFromUrl } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const inSpanish = lang === "es";
+---
+
+<div class="bg-latte-crust dark:bg-mocha-crust flex justify-center">
+    <div class="w-recommend text-center">
+        <p
+            class="py-2 text-latte-subtext1 dark:text-mocha-subtext1 text-[12px] sm:text-[14px]"
+        >
+            © 2024 Diego Armando Gómez Martínez.{" "}
+            <span class="hidden sm:inline"> | </span>
+            <br aria-hidden={true} class="block sm:hidden" />{" "}
+            {
+                inSpanish
+                    ? "Casi todos los derechos reservados."
+                    : "Almost all rights reserved."
+            }
+        </p>
+    </div>
+</div>
