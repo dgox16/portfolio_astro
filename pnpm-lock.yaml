@@ -30,9 +30,6 @@ importers:
         specifier: ^5.5.4
         version: 5.5.4
     devDependencies:
-      astro-themes:
-        specifier: ^0.2.5
-        version: 0.2.5(astro@4.12.3(@types/node@22.1.0)(typescript@5.5.4))
       prettier-plugin-astro:
         specifier: ^0.14.1
         version: 0.14.1
@@ -729,11 +726,6 @@ packages:
 
   astro-icon@1.1.0:
     resolution: {integrity: sha512-Nksc09p7UuHeMcPNS9w1pKqRw3+wEmmh0A3FJW+FNXvqaeWI4RLvD1MCWErpY3Z5Cvad317rvLdik/Hg8GEk8Q==}
-
-  astro-themes@0.2.5:
-    resolution: {integrity: sha512-aJGSKlgS1ggXZXARsusd1IzUpJ3ohSgSn2rYYtNG4s+by/w5Sctg9YI1yE1Ny+oDKalWKGLVKICygaLqVf9JBQ==}
-    peerDependencies:
-      astro: '*'
 
   astro@4.12.3:
     resolution: {integrity: sha512-rFcRktbZk8CsHufLOB51gYAia3RTuOyaBD8iZXRHP7Oqo6QviquNaa/5U6RoUqyF5KS8vyq/ldJ5jfboJzxuuw==}
@@ -3022,10 +3014,6 @@ snapshots:
       '@iconify/utils': 2.1.29
     transitivePeerDependencies:
       - supports-color
-
-  astro-themes@0.2.5(astro@4.12.3(@types/node@22.1.0)(typescript@5.5.4)):
-    dependencies:
-      astro: 4.12.3(@types/node@22.1.0)(typescript@5.5.4)
 
   astro@4.12.3(@types/node@22.1.0)(typescript@5.5.4):
     dependencies:

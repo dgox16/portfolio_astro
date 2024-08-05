@@ -2,6 +2,7 @@
 	"name": "portfolio-astro",
 	"type": "module",
 	"version": "0.0.1",
+	"packageManager": "pnpm@9.4.0",
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro preview",
@@ -19,8 +20,6 @@
 		"typescript": "^5.5.4"
 	},
 	"devDependencies": {
-		"astro-themes": "^0.2.5",
 		"prettier-plugin-astro": "^0.14.1"
 	}
 }
-
