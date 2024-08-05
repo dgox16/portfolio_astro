@@ -27,11 +27,11 @@ export const tags = {
 	bootstrap: {
 		name: "Bootstrap",
 		icon: "bootstrap",
-		color: "bg-mauve",
+		color: "bg-latte-mauve dark:bg-mocha-mauve",
 	},
 	nextJs: {
 		name: "NextJS",
-		icon: "nextdotjs",
+		icon: "nextjs",
 		color: "bg-latte-text dark:bg-mocha-text",
 	},
 	django: {
@@ -52,7 +52,7 @@ export const tags = {
 	sqlite: {
 		name: "SQLite",
 		icon: "sqlite",
-		color: "bg-lavender",
+		color: "bg-latte-lavender dark:bg-mocha-lavender",
 	},
 	mongo: {
 		name: "MongoDB",
@@ -77,7 +77,7 @@ export const tags = {
 	javascript: {
 		name: "JavaScript",
 		icon: "javascript",
-		color: "bg-yellow",
+		color: "bg-latte-yellow dark:bg-mocha-yellow",
 	},
 	typescript: {
 		name: "TypeScript",
@@ -87,11 +87,11 @@ export const tags = {
 	python: {
 		name: "Python",
 		icon: "python",
-		color: "bg-yellow",
+		color: "bg-latte-yellow dark:bg-mocha-yellow",
 	},
 	html: {
 		name: "HTML",
-		icon: "html5",
+		icon: "html",
 		color: "bg-latte-peach dark:bg-mocha-peach",
 	},
 	rust: {
@@ -101,12 +101,12 @@ export const tags = {
 	},
 	css: {
 		name: "CSS",
-		icon: "css3",
+		icon: "css",
 		color: "bg-latte-blue dark:bg-mocha-blue",
 	},
 	bash: {
 		name: "Bash",
-		icon: "gnubash",
+		icon: "bash",
 		color: "bg-latte-text dark:bg-mocha-text",
 	},
 	lua: {
@@ -126,7 +126,7 @@ export const tags = {
 	},
 	nodeJs: {
 		name: "NodeJS",
-		icon: "nodedotjs",
+		icon: "nodejs",
 		color: "bg-latte-green dark:bg-mocha-green",
 	},
 	vscode: {
