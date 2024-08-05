@@ -9,7 +9,27 @@ import { Icon } from "astro-icon/components";
 >
     <Icon name="sunFilled" class="size-6 hidden dark:block" />
     <Icon name="moonFilled" class="size-6 block dark:hidden" />
-    <script>
+    <script is:inline>
+        let remove = null;
+        const matchMedia = window.matchMedia("(prefers-color-scheme: dark)");
+
+        const updateTheme = () => {
+            if (remove != null) {
+                remove();
+            }
+            matchMedia.addEventListener("change", updateTheme);
+            remove = () => {
+                matchMedia.removeEventListener("change", updateTheme);
+            };
+            const isDark = matchMedia.matches;
+
+            document.documentElement.classList[isDark ? "add" : "remove"](
+                "dark",
+            );
+        };
+
+        updateTheme();
+
         document
             .getElementById("theme-selector")
             ?.addEventListener("click", () => {
