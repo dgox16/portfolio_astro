@@ -13,6 +13,18 @@ const lang = getLangFromUrl(Astro.url);
         <meta name="description" content="Diego Armando Gómez Martínez" />
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link
+            href="/light-favicon.svg"
+            rel="icon"
+            type="image/svg+xml"
+            media="(prefers-color-scheme: light)"
+        />
+        <link
+            href="/dark-favicon.svg"
+            rel="icon"
+            type="image/svg+xml"
+            media="(prefers-color-scheme: dark)"
+        />
         <meta name="generator" content={Astro.generator} />
         <title>Portfolio | Diego Armando</title>
     </head>
