@@ -26,7 +26,10 @@ const inSpanish = lang === "es";
             type="button"
             class="w-64 xs:w-72 md:w-96 p-4 md:p-8 text-latte-base dark:text-mocha-base flex items-center justify-center font-display font-bold rounded-xl h-12 bg-gradient-to-tr from-latte-green via-latte-teal to-latte-sapphire dark:from-mocha-green dark:via-mocha-teal dark:to-mocha-sapphire hover:scale-105 transition duration-150"
         >
-            <Icon name="email" class="mr-3" />
+            <Icon
+                name="email"
+                class="mr-3 md:size-10 min-[350px]:size-[30px] size-5"
+            />
             <p class="text-[17px] xs:text-[18px] md:text-[22px]">
                 {inSpanish ? "Vamos a hablar!" : "Let's Talk!"}
             </p>
