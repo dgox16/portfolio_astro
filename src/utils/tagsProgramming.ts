@@ -84,6 +84,11 @@ export const tags = {
 		icon: "typescript",
 		color: "bg-latte-blue dark:bg-mocha-blue",
 	},
+	php: {
+		name: "PHP",
+		icon: "php",
+		color: "bg-latte-mauve dark:bg-mocha-mauve",
+	},
 	python: {
 		name: "Python",
 		icon: "python",
