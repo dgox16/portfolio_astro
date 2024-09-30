@@ -10,18 +10,22 @@ const socials = [
     {
         url: "https://github.com/dgox16",
         icon: "github",
+        label: "Github",
     },
     {
         url: "mailto:dgox16@gmail.com",
         icon: "email",
+        label: "Email",
     },
     {
         url: "https://www.linkedin.com/in/diego-gomez-0b7448270/",
         icon: "linkedin",
+        label: "LinkedIn",
     },
     {
         url: "https://wa.me/524451312061",
         icon: "whatsapp",
+        label: "Whatsapp",
     },
 ];
 ---
@@ -57,8 +61,8 @@ const socials = [
             class="lg:gap-14 grid grid-cols-4 justify-center lg:justify-normal w-4/5 lg:w-1/4"
         >
             {
-                socials.map(({ url, icon }) => (
-                    <ButtonSocial icon={icon} url={url} />
+                socials.map(({ url, icon, label }) => (
+                    <ButtonSocial icon={icon} url={url} label={label} />
                 ))
             }
         </div>
