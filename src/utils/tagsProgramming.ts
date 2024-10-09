@@ -44,6 +44,11 @@ export const tags = {
 		icon: "jinja",
 		color: "bg-latte-text dark:bg-mocha-text",
 	},
+	laravel: {
+		name: "Laravel",
+		icon: "laravel",
+		color: "bg-latte-red dark:bg-mocha-red",
+	},
 	mySql: {
 		name: "MySQL",
 		icon: "mysql",
