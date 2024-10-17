@@ -44,10 +44,10 @@ const socials = [
             <script is:inline>
                 const btnDownloadCv = document.getElementById("btnDownloadCv");
                 btnDownloadCv.addEventListener("click", () => {
-                    const url = "/CV_DiegoArmando.pdf";
+                    const url = "/cv_diego_armando.pdf";
                     const link = document.createElement("a");
                     link.href = url;
-                    link.setAttribute("download", "CV_DiegoArmando.pdf");
+                    link.setAttribute("download", "cv_diego_armando.pdf");
                     document.body.appendChild(link);
                     link.click();
                     document.body.removeChild(link);
