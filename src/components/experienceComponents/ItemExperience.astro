@@ -48,7 +48,7 @@ const { item } = Astro.props;
     <div class="relative md:col-span-2">
         <div class="sticky top-0">
             <span
-                class="text-latte-green dark:text-mocha-green -left-[44px] absolute rounded-full text-6xl"
+                class="text-latte-green dark:text-mocha-green mt-6 -left-[47px] absolute rounded-full text-6xl"
             >
                 &bull;
             </span>
@@ -58,12 +58,12 @@ const { item } = Astro.props;
                 {item.job}
             </h3>
             <p
-                class="text-[19px]/[18px] xss:text-[20px]/[20px] xs:text-[22px]/[22px] sm:text-[24px] md:text-[17px] font-bold text-latte-green dark:text-mocha-green mb-1"
+                class="text-[19px]/[18px] xss:text-[20px]/[20px] xs:text-[22px]/[22px] sm:text-[24px] md:text-base text-latte-green dark:text-mocha-green mb-1"
             >
                 {item.stack}
             </p>
             <h4
-                class="font-semibold text-xl text-latte-text dark:text-mocha-text"
+                class="font-semibold text-lg text-latte-text dark:text-mocha-text"
             >
                 {item.company}
             </h4>
@@ -74,7 +74,7 @@ const { item } = Astro.props;
         </div>
     </div>
     <div
-        class="relative flex flex-col gap-2 pb-4 text-latte-text dark:text-mocha-text text-[17px]/[21px] md:col-span-3"
+        class="relative flex flex-col gap-2 pb-4 text-latte-text dark:text-mocha-text text-base md:col-span-3"
     >
         {item.description}
     </div>
