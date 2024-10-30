@@ -1,6 +1,5 @@
 ---
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
-import { Icon } from "astro-icon/components";
 import ButtonSocial from "./ButtonSocial.astro";
 
 const lang = getLangFromUrl(Astro.url);
@@ -35,9 +34,8 @@ const socials = [
         <button
             type="button"
             id="btnDownloadCv"
-            class="w-[90%] lg:w-full text-latte-base dark:text-mocha-base hover:scale-105 transition duration-150 flex items-center justify-center font-display text-xl font-bold rounded-xl h-10 xs:h-12 bg-gradient-to-tr from-latte-blue via-latte-mauve to-latte-pink dark:from-mocha-blue dark:via-mocha-mauve dark:to-mocha-pink"
+            class="w-[90%] lg:w-full text-latte-base dark:text-mocha-base hover:scale-105 transition duration-150 flex items-center justify-center font-display text-xl font-bold rounded-xl h-10 xs:h-11 bg-gradient-to-tr from-latte-blue via-latte-mauve to-latte-pink dark:from-mocha-blue dark:via-mocha-mauve dark:to-mocha-pink"
         >
-            <Icon name="fileDownload" class="size-5 mr-1" />
             <p class="text-[15px] lg:text-[13px] xl:text-[15px]">
                 {t("header.buttonCV")}
             </p>

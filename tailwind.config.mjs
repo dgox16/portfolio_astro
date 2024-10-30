@@ -15,7 +15,7 @@ export default {
 				"80px": "80px",
 			},
 			width: {
-				recommend: "115ch",
+				recommend: "1100px",
 			},
 			colors: {
 				mocha: {
