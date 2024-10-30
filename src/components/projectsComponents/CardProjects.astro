@@ -1,43 +1,44 @@
 ---
-const { image, title, description, tags, link, github } = Astro.props;
+import ButtonProjects from "./ButtonProjects.astro";
+const {image, title, description, tags, link, github} = Astro.props;
 
-import { Icon } from "astro-icon/components";
+import {Icon} from "astro-icon/components";
 ---
 
 <div class="flex justify-center">
     <div
-        class="w-full bg-latte-mantle dark:bg-mocha-mantle p-5 sm:p-8 md:p-4 lg:p-3 rounded-2xl"
+            class="w-full bg-latte-mantle dark:bg-mocha-mantle p-5 sm:p-8 md:p-4 lg:p-3 rounded-2xl"
     >
         <img
-            alt={title}
-            class="rounded-2xl my-auto mx-auto w-full md:w-full lg:w-full"
-            src={image}
+                alt={title}
+                class="rounded-2xl my-auto mx-auto w-full md:w-full lg:w-full"
+                src={image}
         />
         <div class="flex flex-col items-center text-center">
             <h1
-                class="text-[19px] xss:text-[20px] xs:text-[22px] sm:text-[24px] md:text-[30px] font-bold text-latte-text dark:text-mocha-text mt-6 mb-1 uppercase"
+                    class="text-[19px] xss:text-[20px] xs:text-[22px] sm:text-[24px] md:text-[30px] font-bold text-latte-text dark:text-mocha-text mt-6 mb-2"
             >
                 {title}
             </h1>
             <ul class="flex flex-row mb-1 justify-center gap-x-2">
                 {
                     tags.map((tag) => (
-                        <li>
+                            <li>
                             <span
-                                class={`flex text-latte-base dark:text-mocha-base gap-x-2 rounded-full text-[12px] ${tag.color} p-2 `}
-                                title={tag.name}
+                                    class={`flex text-latte-base dark:text-mocha-base gap-x-2 rounded-full text-[12px] ${tag.color} p-2 `}
+                                    title={tag.name}
                             >
                                 <Icon
-                                    name={tag.icon}
-                                    class="size-[18px] lg:size-[22px]"
+                                        name={tag.icon}
+                                        class="size-[18px]"
                                 />
                             </span>
-                        </li>
+                            </li>
                     ))
                 }
             </ul>
             <p
-                class="mt-5 text-[13px] xss:text-[14px] xs:text-[14px] sm:text-[17px] md:text-[17px] lg:text-[17px] text-latte-subtext1 dark:text-mocha-subtext1"
+                    class="mt-5 text-[13px] xss:text-[14px] xs:text-[14px] sm:text-base text-latte-subtext1 dark:text-mocha-subtext1 text-pretty"
             >
                 {description}
             </p>
@@ -45,30 +46,16 @@ import { Icon } from "astro-icon/components";
                 <div class="flex justify-center gap-x-4">
                     {
                         github && (
-                            <a
-                                type="button"
-                                class="w-20 sm:w-24 hover:scale-105 transition duration-150 rounded-xl h-9 sm:h-10 flex justify-center sm:text-[16px] text-latte-text dark:text-mocha-text items-center bg-latte-crust dark:bg-mocha-crust border-2 border-latte-text dark:border-mocha-text font-medium text-sm"
-                                href={github}
-                                rel="noreferrer"
-                                target="_blank"
-                                role="link"
-                            >
-                                Github
-                            </a>
+                                    <ButtonProjects link={github}>
+                                        Github
+                                    </ButtonProjects>
                         )
                     }
                     {
                         link && (
-                            <a
-                                type="button"
-                                class="w-20 sm:w-24 hover:scale-105 transition duration-150 rounded-xl h-9 sm:h-10 flex justify-center sm:text-[16px] text-latte-text dark:text-mocha-text items-center bg-latte-crust dark:bg-mocha-crust border-2 border-latte-text dark:border-mocha-text font-medium text-sm"
-                                href={link}
-                                rel="noreferrer"
-                                target="_blank"
-                                role="link"
-                            >
-                                Preview
-                            </a>
+                                    <ButtonProjects link={link}>
+                                        Preview
+                                    </ButtonProjects>
                         )
                     }
                 </div>
