@@ -4,7 +4,7 @@ const styles = {
     green: [
         "flex-1 h-2 bg-latte-green/50 dark:bg-mocha-green/50",
         "flex-1 h-2 bg-latte-green/70 dark:bg-mocha-green/70",
-        "flex-1 h-2 bg-latte-green bg-mocha-green",
+        "flex-1 h-2 bg-latte-green dark:bg-mocha-green",
     ],
     blue: [
         "flex-1 h-2 bg-latte-blue/50 dark:bg-mocha-blue/50",
@@ -28,19 +28,20 @@ const styles = {
     ],
 };
 
-const { color } = Astro.props as { color: Color };
+const {color} = Astro.props as { color: Color };
 const stylesArray = styles[color];
 ---
 
 <div class="w-full mx-auto">
     <div class="relative flex flex-col items-center">
         <h1
-            class="text-[21px] xss:text-[24px] xs:text-[28px] sm:text-[35px]/[50px] md:text-[45px]/[60px] lg:text-[46px]/[80px] font-bold text-latte-text dark:text-mocha-text"
+                class="text-[21px] xss:text-[24px] xs:text-[28px] sm:text-[35px]/[50px] md:text-[45px]/[60px] lg:text-[46px]/[80px] font-bold text-latte-text dark:text-mocha-text"
         >
-            <slot />
+            <slot/>
         </h1>
         <div class="flex w-24 mb-5 mt-1 md:mb-10 overflow-hidden rounded">
-            {stylesArray.map((item: string) => <div class={item} />)}
+            {stylesArray.map((item: string) =>
+                    <div class={item}/>)}
         </div>
     </div>
 </div>
