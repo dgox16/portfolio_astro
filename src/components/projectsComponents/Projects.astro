@@ -1,8 +1,8 @@
 ---
 import TitleSection from "../TitleSection.astro";
 import CardProjects from "./CardProjects.astro";
-import { getLangFromUrl } from "../../i18n/utils";
-import { tags } from "../../utils/tagsProgramming";
+import {getLangFromUrl} from "../../i18n/utils";
+import {tags} from "../../utils/tagsProgramming";
 
 const lang = getLangFromUrl(Astro.url);
 const inSpanish = lang === "es";
@@ -28,6 +28,16 @@ const projects = [
         github: "https://github.com/dgox16/shordly",
         image: "/images/shordly2.avif",
         tags: [tags.rust, tags.astro, tags.tailwind],
+    },
+    {
+        title: "EasySudoku",
+        description: inSpanish
+            ? "Sudoku relajante desarrollado con Laravel y React"
+            : "Soothing and mellow Sudoku built with Laravel and React",
+
+        github: "https://github.com/dgox16/easySudoku",
+        image: "/images/easySudoku.avif",
+        tags: [tags.laravel, tags.react, tags.postgresql],
     },
     {
         title: "Penguin Movies",
@@ -64,22 +74,22 @@ const projects = [
 <div class="flex justify-center mx-7 xl:mx-0" id="projects">
     <div class="w-full md:w-recommend">
         <TitleSection color={"red"}
-            >{inSpanish ? "Proyectos" : "Projects"}</TitleSection
+        >{inSpanish ? "Proyectos" : "Projects"}</TitleSection
         >
         <div
-            class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-4"
+                class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-4"
         >
             {
                 projects.map(
-                    ({ image, title, description, tags, link, github }) => (
-                        <CardProjects
-                            image={image}
-                            title={title}
-                            description={description}
-                            tags={tags}
-                            link={link}
-                            github={github}
-                        />
+                    ({image, title, description, tags, link, github}) => (
+                            <CardProjects
+                                    image={image}
+                                    title={title}
+                                    description={description}
+                                    tags={tags}
+                                    link={link}
+                                    github={github}
+                            />
                     ),
                 )
             }
