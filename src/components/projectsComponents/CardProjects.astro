@@ -1,64 +1,68 @@
 ---
 import ButtonProjects from "./ButtonProjects.astro";
-const {image, title, description, tags, link, github} = Astro.props;
+const { image, title, description, tags, link, github } = Astro.props;
 
-import {Icon} from "astro-icon/components";
+import { Icon } from "astro-icon/components";
 ---
 
 <div class="flex justify-center">
     <div
-            class="w-full bg-latte-mantle dark:bg-mocha-mantle p-5 sm:p-8 md:p-4 lg:p-3 rounded-2xl"
+        class="w-full bg-latte-mantle dark:bg-mocha-mantle p-5 sm:p-8 md:p-4 lg:p-3 rounded-2xl flex flex-col"
     >
-        <img
-                alt={title}
-                class="rounded-2xl my-auto mx-auto w-full md:w-full lg:w-full"
-                src={image}
-        />
-        <div class="flex flex-col items-center text-center">
+        {/* Imagen */}
+        <img alt={title} class="rounded-2xl mx-auto w-full" src={image} />
+
+        {/* Contenido */}
+        <div class="flex flex-col flex-grow items-center text-center mt-6">
             <h1
-                    class="text-[19px] xss:text-[20px] xs:text-[22px] sm:text-[24px] md:text-[30px] font-bold text-latte-text dark:text-mocha-text mt-6 mb-2"
+                class="text-[19px] xss:text-[20px] xs:text-[22px] sm:text-[24px] md:text-[30px] font-bold text-latte-text dark:text-mocha-text mb-4"
             >
                 {title}
             </h1>
-            <ul class="flex flex-row mb-1 justify-center gap-x-2">
+
+            <ul class="flex flex-row justify-center gap-x-2 mb-4">
                 {
                     tags.map((tag) => (
-                            <li>
+                        <li>
                             <span
-                                    class={`flex text-latte-base dark:text-mocha-base gap-x-2 rounded-full text-[12px] ${tag.color} p-2 `}
-                                    title={tag.name}
+                                class={`flex text-latte-base dark:text-mocha-base gap-x-2 rounded-full text-[12px] ${tag.color} p-2`}
+                                title={tag.name}
                             >
-                                <Icon
-                                        name={tag.icon}
-                                        class="size-[18px]"
-                                />
+                                <Icon name={tag.icon} class="size-[18px]" />
                             </span>
-                            </li>
+                        </li>
                     ))
                 }
             </ul>
+
             <p
-                    class="mt-5 text-[13px] xss:text-[14px] xs:text-[14px] sm:text-base text-latte-subtext1 dark:text-mocha-subtext1 text-pretty"
+                class="text-[13px] xss:text-[14px] text-pretty sm:text-base text-latte-subtext1 dark:text-mocha-subtext1"
             >
                 {description}
             </p>
-            <div class="flex justify-center items-end mt-5">
-                <div class="flex justify-center gap-x-4">
-                    {
-                        github &&
-                            <ButtonProjects link={github}>
-                                Github
-                            </ButtonProjects>
 
-                    }
-                    {
-                        link &&
-                            <ButtonProjects link={link}>
-                                Preview
-                            </ButtonProjects>
-
-                    }
-                </div>
+            {/* Botones */}
+            <div class="mt-auto flex justify-center gap-x-4 pt-5">
+                {
+                    github && (
+                        <ButtonProjects
+                            link={github}
+                            class="min-w-[100px] text-center"
+                        >
+                            Github
+                        </ButtonProjects>
+                    )
+                }
+                {
+                    link && (
+                        <ButtonProjects
+                            link={link}
+                            class="min-w-[100px] text-center"
+                        >
+                            Preview
+                        </ButtonProjects>
+                    )
+                }
             </div>
         </div>
     </div>
