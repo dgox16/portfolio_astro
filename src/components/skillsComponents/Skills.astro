@@ -1,8 +1,8 @@
 ---
 import TitleSection from "../TitleSection.astro";
-import {getLangFromUrl} from "../../i18n/utils";
-import {tags} from "../../utils/tagsProgramming";
-import {Icon} from "astro-icon/components";
+import { getLangFromUrl } from "../../i18n/utils";
+import { tags } from "../../utils/tagsProgramming";
+import { Icon } from "astro-icon/components";
 
 const lang = getLangFromUrl(Astro.url);
 const inSpanish = lang === "es";
@@ -23,9 +23,9 @@ const skills = [
     {
         name: "Backend",
         tags: [
+            tags.laravel,
             tags.django,
             tags.express,
-            tags.laravel,
             tags.supabase,
             tags.postgresql,
             tags.sqlite,
@@ -55,6 +55,7 @@ const skills = [
             tags.docker,
             tags.vscode,
             tags.neovim,
+            tags.jira,
             tags.npm,
         ],
     },
@@ -64,34 +65,34 @@ const skills = [
 <div class="flex justify-center mx-7 xl:mx-0" id="skills">
     <div class="w-full md:w-recommend">
         <TitleSection color={"yellow"}
-        >{inSpanish ? "Habilidades" : "Skills"}</TitleSection
+            >{inSpanish ? "Habilidades" : "Skills"}</TitleSection
         >
         <div class="gap-3 md:gap-6 lg:gap-14 grid grid-cols-1 md:grid-cols-2">
             {
-                skills.map(({name, tags}) => (
-                        <div class="flex flex-col justify-center bg-latte-mantle dark:bg-mocha-mantle rounded-2xl p-6 xs:p-8">
-                            <div class="grid gap-6 xs:gap-8 grid-cols-4 sm:grid-cols-4  mb-9">
-                                {tags.map((tag) => (
-                                        <div class="flex flex-col justify-center items-center">
-                                            <div
-                                                    class={`flex size-12 xs:size-[3.50rem] sm:size-20 md:size-14 lg:size-[4.5rem] text-latte-base dark:text-mocha-base items-center justify-center rounded-full ${tag.color} p-2 `}
-                                                    title={tag.name}
-                                            >
-                                                <Icon
-                                                        name={tag.icon}
-                                                        class="lg:size-9 md:size-7 sm:size-9 size-7"
-                                                />
-                                            </div>
-                                            <span class="text-xs xs:text-xs sm:text-[15px] md:text-[13px] lg:text-[15px] text-latte-text dark:text-mocha-text mt-2 hidden xs:inline">
+                skills.map(({ name, tags }) => (
+                    <div class="flex flex-col justify-center bg-latte-mantle dark:bg-mocha-mantle rounded-2xl p-6 xs:p-8">
+                        <div class="grid gap-6 xs:gap-8 grid-cols-4 sm:grid-cols-4  mb-9">
+                            {tags.map((tag) => (
+                                <div class="flex flex-col justify-center items-center">
+                                    <div
+                                        class={`flex size-12 xs:size-[3.50rem] sm:size-20 md:size-14 lg:size-[4.5rem] text-latte-base dark:text-mocha-base items-center justify-center rounded-full ${tag.color} p-2 `}
+                                        title={tag.name}
+                                    >
+                                        <Icon
+                                            name={tag.icon}
+                                            class="lg:size-9 md:size-7 sm:size-9 size-7"
+                                        />
+                                    </div>
+                                    <span class="text-xs xs:text-xs sm:text-[15px] md:text-[13px] lg:text-[15px] text-latte-text dark:text-mocha-text mt-2 hidden xs:inline">
                                         {tag.name}
                                     </span>
-                                        </div>
-                                ))}
-                            </div>
-                            <span class="text-[18px] xs:text-[22px] sm:text-[24px] md:text-[26px] font-bold text-center text-latte-text dark:text-mocha-text uppercase">
+                                </div>
+                            ))}
+                        </div>
+                        <span class="text-[18px] xs:text-[22px] sm:text-[24px] md:text-[26px] font-bold text-center text-latte-text dark:text-mocha-text uppercase">
                             {name}
                         </span>
-                        </div>
+                    </div>
                 ))
             }
         </div>

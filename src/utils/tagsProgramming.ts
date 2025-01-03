@@ -159,4 +159,9 @@ export const tags = {
 		icon: "npm",
 		color: "bg-latte-red dark:bg-mocha-red",
 	},
+	jira: {
+		name: "Jira",
+		icon: "jira",
+		color: "bg-latte-blue dark:bg-mocha-blue",
+	},
 };
