@@ -31,10 +31,10 @@ const navItems = [
 ---
 
 <header
-    class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto bg-latte-crust dark:bg-mocha-crust backdrop-blur bg-opacity-80"
+    class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto bg-oldworld-gray2"
 >
     <div
-        class="w-recommend flex h-16 flex-row justify-between items-center mx-7 my-auto text-latte-text dark:text-mocha-text"
+        class="w-recommend flex h-16 flex-row justify-between items-center mx-7 my-auto text-oldworld-fg"
     >
         <button class="font-extrabold uppercase" type="button">
             {t("nav.home")}
@@ -44,7 +44,7 @@ const navItems = [
                 navItems.map((link) => (
                     <a
                         href={link.url}
-                        class="relative block px-2 py-2 text-sm opacity-90 transition hover:text-latte-lavender dark:hover:text-mocha-lavender"
+                        class="relative block px-2 py-2 text-sm opacity-90 transition hover:text-oldworld-purple"
                         aria-label={link.label}
                     >
                         {link.title}

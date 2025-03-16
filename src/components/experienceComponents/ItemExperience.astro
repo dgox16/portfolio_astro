@@ -4,37 +4,33 @@ const { item } = Astro.props;
 
 <div class="block min-[850px]:hidden">
     <div class="flex justify-center">
-        <div
-            class="bg-latte-green dark:bg-mocha-green rounded-3xl py-2 px-4 sm:px-6 my-4 w-fit"
-        >
+        <div class="bg-oldworld-green rounded-3xl py-2 px-4 sm:px-6 my-4 w-fit">
             <p
-                class="text-[13px] xs:text-[14px] md:text-[19px] font-medium text-latte-crust dark:text-mocha-crust"
+                class="text-[13px] xs:text-[14px] md:text-[19px] font-medium text-oldworld-bg"
             >
                 {item.date}
             </p>
         </div>
     </div>
     <div class="flex justify-center">
-        <div
-            class="bg-latte-mantle dark:bg-mocha-mantle p-5 sm:p-6 md:p-8 rounded-2xl"
-        >
+        <div class="bg-oldworld-gray2 p-5 sm:p-6 md:p-8 rounded-2xl">
             <p
-                class="uppercase text-[19px]/[18px] xss:text-[20px]/[20px] xs:text-[22px]/[22px] sm:text-[24px] md:text-[30px] font-bold text-latte-text dark:text-mocha-text text-center text-pretty"
+                class="uppercase text-[19px]/[18px] xss:text-[20px]/[20px] xs:text-[22px]/[22px] sm:text-[24px] md:text-[30px] font-bold text-oldworld-fg text-center text-pretty"
             >
                 {item.job}
             </p>
             <p
-                class="text-[14px] xss:text-[16px] xs:text-[18px] sm:text-[19px] md:text-[22px] text-latte-subtext1 font-medium dark:text-mocha-subtext1 md:mb-3 mt-1 text-center"
+                class="text-[14px] xss:text-[16px] xs:text-[18px] sm:text-[19px] md:text-[22px] text-oldworld-subtext1 font-medium md:mb-3 mt-1 text-center"
             >
                 {item.stack}
             </p>
             <p
-                class="text-[13px] xss:text-[15px] xs:text-[16px] sm:text-[19px] md:text-[25px] text-latte-subtext1 dark:text-mocha-subtext1 mb-2 md:mb-4 text-center"
+                class="text-[13px] xss:text-[15px] xs:text-[16px] sm:text-[19px] md:text-[25px] text-oldworld-subtext1 mb-2 md:mb-4 text-center"
             >
                 {item.company}
             </p>
             <p
-                class="text-[13px] xss:text-[13px] xs:text-[14px] sm:text-[15px] md:text-[17px] lg:text-[20px] text-latte-subtext1 dark:text-mocha-subtext1 text-pretty text-center"
+                class="text-[13px] xss:text-[13px] xs:text-[14px] sm:text-[15px] md:text-[17px] lg:text-[20px] text-oldworld-fg text-pretty text-center"
             >
                 {item.description}
             </p>
@@ -48,33 +44,28 @@ const { item } = Astro.props;
     <div class="relative md:col-span-2">
         <div class="sticky top-0">
             <span
-                class="text-latte-green dark:text-mocha-green mt-6 -left-[47px] absolute rounded-full text-6xl"
+                class="text-oldworld-green mt-6 -left-[47px] absolute rounded-full text-6xl"
             >
                 &bull;
             </span>
-            <h3
-                class="text-xl font-bold text-latte-green dark:text-mocha-green"
-            >
+            <h3 class="text-xl font-bold text-oldworld-green">
                 {item.job}
             </h3>
             <p
-                class="text-[19px]/[18px] xss:text-[20px]/[20px] xs:text-[22px]/[22px] sm:text-[24px] md:text-base text-latte-green dark:text-mocha-green mb-1"
+                class="text-[19px]/[18px] xss:text-[20px]/[20px] xs:text-[22px]/[22px] sm:text-[24px] md:text-base text-oldworld-green mb-1"
             >
                 {item.stack}
             </p>
-            <h4
-                class="font-semibold text-lg text-latte-text dark:text-mocha-text"
-            >
+            <h4 class="font-semibold text-lg text-oldworld-fg">
                 {item.company}
             </h4>
-            <time
-                class="p-0 m-0 text-sm text-latte-subtext1 dark:text-mocha-subtext1"
+            <time class="p-0 m-0 text-sm text-oldworld-subtext1"
                 >{item.date}</time
             >
         </div>
     </div>
     <div
-        class="relative flex flex-col gap-2 pb-4 text-latte-text dark:text-mocha-text text-base md:col-span-3"
+        class="relative flex flex-col gap-2 pb-4 text-oldworld-fg text-base md:col-span-3"
     >
         {item.description}
     </div>

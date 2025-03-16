@@ -1,47 +1,46 @@
 ---
-type Color = "green" | "blue" | "yellow" | "red" | "teal";
+type Color = "green" | "blue" | "yellow" | "red" | "cyan";
 const styles = {
     green: [
-        "flex-1 h-2 bg-latte-green/50 dark:bg-mocha-green/50",
-        "flex-1 h-2 bg-latte-green/70 dark:bg-mocha-green/70",
-        "flex-1 h-2 bg-latte-green dark:bg-mocha-green",
+        "flex-1 h-2 bg-oldworld-green/50",
+        "flex-1 h-2 bg-oldworld-green/70",
+        "flex-1 h-2 bg-oldworld-green",
     ],
     blue: [
-        "flex-1 h-2 bg-latte-blue/50 dark:bg-mocha-blue/50",
-        "flex-1 h-2 bg-latte-blue/70 dark:bg-mocha-blue/70",
-        "flex-1 h-2 bg-latte-blue dark:bg-mocha-blue",
+        "flex-1 h-2 bg-oldworld-blue/50",
+        "flex-1 h-2 bg-oldworld-blue/70",
+        "flex-1 h-2 bg-oldworld-blue",
     ],
     yellow: [
-        "flex-1 h-2 bg-latte-yellow/50 dark:bg-mocha-yellow/50",
-        "flex-1 h-2 bg-latte-yellow/70 dark:bg-mocha-yellow/70",
-        "flex-1 h-2 bg-latte-yellow dark:bg-mocha-yellow",
+        "flex-1 h-2 bg-oldworld-yellow/50",
+        "flex-1 h-2 bg-oldworld-yellow/70",
+        "flex-1 h-2 bg-oldworld-yellow",
     ],
     red: [
-        "flex-1 h-2 bg-latte-red/50 dark:bg-mocha-red/50",
-        "flex-1 h-2 bg-latte-red/70 dark:bg-mocha-red/70",
-        "flex-1 h-2 bg-latte-red dark:bg-mocha-red",
+        "flex-1 h-2 bg-oldworld-red/50",
+        "flex-1 h-2 bg-oldworld-red/70",
+        "flex-1 h-2 bg-oldworld-red",
     ],
-    teal: [
-        "flex-1 h-2 bg-latte-teal/50 dark:bg-mocha-teal/50",
-        "flex-1 h-2 bg-latte-teal/70 dark:bg-mocha-teal/70",
-        "flex-1 h-2 bg-latte-teal dark:bg-mocha-teal",
+    cyan: [
+        "flex-1 h-2 bg-oldworld-cyan/50",
+        "flex-1 h-2 bg-oldworld-cyan/70",
+        "flex-1 h-2 bg-oldworld-cyan",
     ],
 };
 
-const {color} = Astro.props as { color: Color };
+const { color } = Astro.props as { color: Color };
 const stylesArray = styles[color];
 ---
 
 <div class="w-full mx-auto">
     <div class="relative flex flex-col items-center">
         <h1
-                class="text-[21px] xss:text-[24px] xs:text-[28px] sm:text-[35px]/[50px] md:text-[45px]/[60px] lg:text-[46px]/[80px] font-bold text-latte-text dark:text-mocha-text"
+            class="text-[21px] xss:text-[24px] xs:text-[28px] sm:text-[35px]/[50px] md:text-[45px]/[60px] lg:text-[46px]/[80px] font-bold text-oldworld-fg"
         >
-            <slot/>
+            <slot />
         </h1>
         <div class="flex w-24 mb-5 mt-1 md:mb-10 overflow-hidden rounded">
-            {stylesArray.map((item: string) =>
-                    <div class={item}/>)}
+            {stylesArray.map((item: string) => <div class={item} />)}
         </div>
     </div>
 </div>
