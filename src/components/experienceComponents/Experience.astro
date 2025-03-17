@@ -1,10 +1,12 @@
 ---
-import { getLangFromUrl } from "../../i18n/utils";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import TitleSection from "../TitleSection.astro";
 import ItemExperience from "./ItemExperience.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const inSpanish = lang === "es";
+
+const t = useTranslations(getLangFromUrl(Astro.url));
 
 const experience = [
     {
@@ -14,9 +16,7 @@ const experience = [
         job: inSpanish ? "DESARROLLADOR FULLSTACK" : "FULLSTACK DEVELOPER",
         stack: "Laravel, ReactJS",
         company: "GELITA",
-        description: inSpanish
-            ? "Soy responsable de la adaptación y actualización de un sistema de control de procesos para la producción de grenetina, preparándolo para su implementación en una nueva planta. Mi enfoque está en garantizar la eficiencia operativa y facilitar la integración del sistema en ambas ubicaciones, mejorando el registro y llenado de bitácoras de producción. Este proceso optimiza la gestión de los datos y mejora la trazabilidad de los procesos, lo que contribuye a una mayor calidad y eficiencia en la producción."
-            : "I am responsible for adapting and updating a process control system for gelatin production, preparing it for implementation in a new plant. My focus is on ensuring operational efficiency and facilitating system integration at both locations, improving the recording and filling of production logs. This process optimizes data management and enhances process traceability, contributing to higher quality and efficiency in production.",
+        description: t("experience.gelita.description"),
     },
     {
         date: inSpanish

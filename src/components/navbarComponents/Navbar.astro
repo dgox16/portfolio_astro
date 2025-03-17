@@ -2,8 +2,7 @@
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import ButtonLanguage from "./ButtonLanguage.astro";
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const t = useTranslations(getLangFromUrl(Astro.url));
 
 const navItems = [
     {

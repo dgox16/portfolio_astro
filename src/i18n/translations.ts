@@ -19,6 +19,8 @@ export const ui = {
 			"I design and create functional and beautiful applications with passion and a focus on user experience and high quality.",
 		"header.buttonCV": "Download CV",
 		"title.aboutMe": "About Me",
+		"experience.gelita.description":
+			"I am responsible for adapting and updating a process control system for gelatin production, preparing it for implementation in a new plant. My focus is on ensuring operational efficiency and facilitating system integration at both locations, improving the recording and filling of production logs. This process optimizes data management and enhances process traceability, contributing to higher quality and efficiency in production.",
 	},
 	es: {
 		"nav.home": "Portafolio",
@@ -33,5 +35,7 @@ export const ui = {
 			"Diseño y creo aplicaciones funcionales y hermosas con pasión y enfoque en la experiencia del usuario y la alta calidad.",
 		"header.buttonCV": "Descargar CV",
 		"title.aboutMe": "Sobre mí",
+		"experience.gelita.description":
+			"Soy responsable de la adaptación y actualización de un sistema de control de procesos para la producción de grenetina, preparándolo para su implementación en una nueva planta. Mi enfoque está en garantizar la eficiencia operativa y facilitar la integración del sistema en ambas ubicaciones, mejorando el registro y llenado de bitácoras de producción. Este proceso optimiza la gestión de los datos y mejora la trazabilidad de los procesos, lo que contribuye a una mayor calidad y eficiencia en la producción.",
 	},
 } as const;
