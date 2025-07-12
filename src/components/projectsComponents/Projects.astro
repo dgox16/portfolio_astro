@@ -1,19 +1,15 @@
 ---
 import TitleSection from "../TitleSection.astro";
 import CardProjects from "./CardProjects.astro";
-import {getLangFromUrl} from "../../i18n/utils";
-import {tags} from "../../utils/tagsProgramming";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import { tags } from "../../utils/tagsProgramming";
 
-const lang = getLangFromUrl(Astro.url);
-const inSpanish = lang === "es";
+const t = useTranslations(getLangFromUrl(Astro.url));
 
 const projects = [
     {
         title: "EasyDiceware",
-        description: inSpanish
-            ? "Generador de contraseñas seguras mediante el método Diceware."
-            : "Secure password generator using the Diceware method.",
-
+        description: t("projects.easyDiceware"),
         link: "https://easy-diceware.up.railway.app/",
         github: "https://github.com/dgox16/easy-diceware",
         image: "/images/easyDiceware.avif",
@@ -21,19 +17,14 @@ const projects = [
     },
     {
         title: "EasySudoku",
-        description: inSpanish
-            ? "Sudoku relajante desarrollado con Laravel y React"
-            : "Soothing and mellow Sudoku built with Laravel and React",
-        link: "https://easy-sudoku.up.railway.app",
+        description: t("projects.easySudoku"),
         github: "https://github.com/dgox16/easySudoku",
         image: "/images/easySudokuNew.avif",
         tags: [tags.laravel, tags.react, tags.postgresql],
     },
     {
         title: "Shordly",
-        description: inSpanish
-            ? "Acortador de URLs realizado con Axum (Rust) junto a Astro para realizar la pagina web."
-            : "URL shortener built with Axum (Rust) along with Astro to create the website.",
+        description: t("projects.shordly"),
         link: "https://shordly.up.railway.app/",
         github: "https://github.com/dgox16/shordly",
         image: "/images/shordlyNew.avif",
@@ -41,9 +32,7 @@ const projects = [
     },
     {
         title: "Penguin Movies",
-        description: inSpanish
-            ? "Tienda Online de tus películas favoritas. Cuenta con autenticación con JWT, manejo de carrito de compras y base de datos MongoDB."
-            : "Online store for your favorite movies. It features JWT authentication, shopping cart management, and MongoDB database.",
+        description: t("projects.penguinMovies"),
         link: "https://penguin-movies.up.railway.app",
         github: "https://github.com/dgox16/penguin-movies",
         image: "/images/penguinMoviesNew.avif",
@@ -51,9 +40,7 @@ const projects = [
     },
     {
         title: "Mi Graduación",
-        description: inSpanish
-            ? "Página realizada para la invitación a una graduación de licenciatura. Desarrollada con Astro y un backend para el manejo de invitados."
-            : "Page created for a bachelor's graduation invitation. Developed with Astro and a backend for managing guests.",
+        description: t("projects.graduacion"),
         link: "https://migraduacion.up.railway.app/",
         github: "https://github.com/dgox16/landingPage_Graduacion",
         image: "/images/graduacionNew.avif",
@@ -61,9 +48,7 @@ const projects = [
     },
     {
         title: "OldWorld.nvim",
-        description: inSpanish
-            ? "Tema oscuro desarrollado con Lua para el editor de código de NeoVim con colores relajantes."
-            : "Dark theme developed with Lua for the NeoVim code editor with relaxing colors.",
+        description: t("projects.oldworld"),
         github: "https://github.com/dgox16/oldworld.nvim",
         image: "/images/oldWorldNew.avif",
         tags: [tags.neovim, tags.lua],
@@ -73,23 +58,21 @@ const projects = [
 
 <div class="flex justify-center mx-7 xl:mx-0" id="projects">
     <div class="w-full md:w-recommend">
-        <TitleSection color={"red"}
-        >{inSpanish ? "Proyectos" : "Projects"}</TitleSection
-        >
+        <TitleSection color={"red"}>{t("title.projects")}</TitleSection>
         <div
-                class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-4"
+            class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-4"
         >
             {
                 projects.map(
-                    ({image, title, description, tags, link, github}) => (
-                            <CardProjects
-                                    image={image}
-                                    title={title}
-                                    description={description}
-                                    tags={tags}
-                                    link={link}
-                                    github={github}
-                            />
+                    ({ image, title, description, tags, link, github }) => (
+                        <CardProjects
+                            image={image}
+                            title={title}
+                            description={description}
+                            tags={tags}
+                            link={link}
+                            github={github}
+                        />
                     ),
                 )
             }

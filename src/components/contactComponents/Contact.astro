@@ -1,24 +1,20 @@
 ---
 import TitleSection from "../TitleSection.astro";
-import { getLangFromUrl } from "../../i18n/utils";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import { Icon } from "astro-icon/components";
 
 const lang = getLangFromUrl(Astro.url);
 const inSpanish = lang === "es";
+
+const t = useTranslations(getLangFromUrl(Astro.url));
 ---
 
 <div class="flex flex-col justify-center items-center mx-7 xl:mx-0">
-    <TitleSection color={"cyan"}
-        >{inSpanish ? "Contacto" : "Contact"}</TitleSection
-    >
+    <TitleSection color={"cyan"}>{t("title.contact")}</TitleSection>
     <p
         class="w-full sm:w-[40ch] text-center text-oldworld-subtext1 font-medium text-[14px] xs:text-[15px] sm:text-[17px] md:text-[19px]"
     >
-        {
-            inSpanish
-                ? "Estoy abierto a cualquier oportunidad y/o propuesta. No dudes en contactarme y compartirme cualquiera de tus ideas, que me pondré en contacto contigo lo antes posible."
-                : "I'm open to any opportunity and/or proposal. Feel free to contact me and share any of your ideas, and I'll get back to you as soon as possible."
-        }
+        {t("contact.description")}
     </p>
     <a class="flex justify-center mt-10 mb-2" href="mailto:dgox16@gmail.com">
         <button
