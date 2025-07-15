@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [icon()]
+	integrations: [icon()],
 
 	i18n: {
 		defaultLocale: "en",
@@ -15,4 +15,3 @@ export default defineConfig({
 		plugins: [tailwindcss()],
 	},
 });
-
