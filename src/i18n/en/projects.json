@@ -1,0 +1,8 @@
+{
+	"easyDiceware": "Secure password generator using the Diceware method.",
+	"easySudoku": "Soothing and mellow Sudoku built with Laravel and React",
+	"shordly": "URL shortener built with Axum (Rust) along with Astro to create the website.",
+	"penguinMovies": "Online store for your favorite movies. It features JWT authentication, shopping cart management, and MongoDB database.",
+	"graduacion": "Page created for a bachelor's graduation invitation. Developed with Astro and a backend for managing guests.",
+	"oldworld": "Dark theme developed with Lua for the NeoVim code editor with relaxing colors."
+}

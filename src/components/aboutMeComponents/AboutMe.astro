@@ -2,7 +2,7 @@
 import TitleSection from "../TitleSection.astro";
 import DescriptionAboutMe from "./DescriptionAboutMe.astro";
 import SvgAboutMe from "./SvgAboutMe.astro";
-import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import { getLangFromUrl, useTranslations } from "../../i18n";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);

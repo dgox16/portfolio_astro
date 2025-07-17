@@ -1,0 +1,21 @@
+{
+	"fullstack": "FULLSTACK DEVELOPER",
+	"webDeveloper": "WEB DEVELOPER",
+	"juniorDeveloper": "JUNIOR DEVELOPER",
+	"gelita": {
+		"date": "September 2024 - Present",
+		"description": "I am responsible for adapting and updating a process control system for gelatin production, preparing it for implementation in a new plant. My focus is on ensuring operational efficiency and facilitating system integration at both locations, improving the recording and filling of production logs. This process optimizes data management and enhances process traceability, contributing to higher quality and efficiency in production."
+	},
+	"sicap": {
+		"date": "February 2024 - October 2024",
+		"description": "Contributed to the development and optimization of a financial cashier system for a Mexican financial entity, ensuring regulatory compliance. Utilized PHP and JavaScript to enhance system operations, significantly improving processing speed and user experience. My work led to a more efficient and agile service, optimizing overall system performance."
+	},
+	"freelancer": {
+		"date": "January 2024 - October 2024",
+		"description": "Freelanced on web projects, specializing in responsive, user-friendly pages with React, Astro, and TailwindCSS. Developed business solutions and event announcements with interactive features like guest list management. Utilized Supabase and Express for backend support, ensuring seamless functionality and a smooth user experience."
+	},
+	"cisi": {
+		"date": "January 2023 - February 2024",
+		"description": "Modernized a financial loan web app with Django, improving functionality and user experience. Optimized backend and frontend workflows, automated PDF report generation, and enhanced predictive analytics with Pandas and Sklearn. Streamlined database management in MySQL and developed a responsive UI using Bootstrap, CSS, and JavaScript,"
+	}
+}

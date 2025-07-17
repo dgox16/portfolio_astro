@@ -1,7 +1,7 @@
 ---
 import TitleSection from "../TitleSection.astro";
 import CardProjects from "./CardProjects.astro";
-import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import { getLangFromUrl, useTranslations } from "../../i18n";
 import { tags } from "../../utils/tagsProgramming";
 
 const t = useTranslations(getLangFromUrl(Astro.url));
