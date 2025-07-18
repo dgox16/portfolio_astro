@@ -21,16 +21,17 @@ export function getLangFromUrl(url: URL) {
 
 export function useTranslations(lang: keyof typeof ui) {
 	return function t(key: string): string {
-		const [section, subkey] = key.split(".");
-		const sectionObj =
-			ui[lang][section as keyof (typeof ui)[typeof defaultLang]];
-		const defaultSectionObj =
-			ui[defaultLang][section as keyof (typeof ui)[typeof defaultLang]];
-
-		return (
-			(sectionObj && (sectionObj as any)[subkey]) ||
-			(defaultSectionObj && (defaultSectionObj as any)[subkey]) ||
-			key
-		);
+		const value =
+			getNestedValue(ui[lang], key) ?? getNestedValue(ui[defaultLang], key);
+		return typeof value === "string" ? value : key;
 	};
+}
+
+function getNestedValue(obj: any, key: string): any {
+	return key.split(".").reduce((acc, part) => {
+		if (acc && typeof acc === "object" && part in acc) {
+			return acc[part];
+		}
+		return undefined;
+	}, obj);
 }
