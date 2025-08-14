@@ -12,10 +12,10 @@
 	},
 	"freelancer": {
 		"date": "Enero 2024 - Octubre 2024",
-		"description": "Trabajé como freelancer en proyectos web, especializándome en páginas responsivas y fáciles de usar con React, Astro y TailwindCSS. Desarrollé soluciones para negocios y anuncios de eventos con características interactivas, como la gestión de listas de invitados. Utilicé Supabase y Express para el soporte backend, asegurando una funcionalidad fluida y una experiencia de usuario satisfactoria."
+		"description": "Diseñé y desarrollé sitios web modernos para pequeños negocios y eventos, enfocándome en rendimiento, diseño responsivo y experiencia de usuario. Utilicé React, Astro y TailwindCSS para crear interfaces rápidas y accesibles, e integré Supabase como backend para manejar bases de datos y autenticación. Entregué soluciones funcionales y atractivas que ayudaron a mis clientes a mejorar su presencia en línea y gestionar sus servicios de manera más eficiente."
 	},
 	"cisi": {
 		"date": "Enero 2023 - Febrero 2024",
-		"description": "Modernicé una aplicación web de préstamos financieros con Django, mejorando la funcionalidad y la experiencia del usuario. Optimicé los flujos de trabajo de backend y frontend, automatizando la generación de reportes en PDF y mejorando el análisis predictivo con Pandas y Sklearn. Simplifiqué la gestión de bases de datos en MySQL y desarrollé una interfaz de usuario responsiva utilizando Bootstrap, CSS y JavaScript."
+		"description": "Migré una aplicación web de préstamos financieros de PHP heredado a Django, JavaScript y Bootstrap, logrando una interfaz más moderna, rápida y estable. Me enfoqué en mejorar la experiencia del usuario y reducir los tiempos de carga. Además, implementé la generación automática de reportes en PDF y desarrollé un sistema de análisis predictivo de riesgo crediticio utilizando Pandas y Scikit-learn, optimizando la toma de decisiones financieras."
 	}
 }
