@@ -1,4 +1,4 @@
-name: Deploy to VPS
+name: Build, Push to GHCR, and Deploy
 
 on:
   push:
@@ -6,36 +6,36 @@ on:
       - main
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
-    # Los pasos que ejecutará la máquina de GitHub
     steps:
-      # 1. Obtenemos el código del repositorio
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 2. Ejecutamos los comandos de despliegue en nuestro VPS
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GHCR_TOKEN }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ghcr.io/${{ github.repository }}:latest
+
       - name: Deploy to VPS
-        # Usamos una acción pre-hecha muy popular para SSH
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            # Navega a la carpeta del proyecto en el VPS
             cd ~/aplicaciones/portfolio_astro
-
-            # Baja los últimos cambios desde GitHub
             git pull origin main
-
-            # Reconstruye la imagen de Docker con los nuevos cambios
-            docker build -t mi-portafolio .
-
-            # Navega a la carpeta donde está el docker-compose.yml
-            cd ~/aplicaciones
-
-            # Levanta el compose. Docker detectará que la imagen
-            # 'mi-app-imagen' fue actualizada y recreará el contenedor.
-            docker compose up -d
+            docker-compose pull
+            docker-compose up -d --force-recreate
+            docker image prune -af

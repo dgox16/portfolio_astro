@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  mi-portafolio:
+    image: ghcr.io/dgox16/portfolio_astro:latest
+    container_name: "mi-portafolio-container"
+    restart: unless-stopped
+    ports:
+      - "8002:80"
