@@ -36,6 +36,6 @@ jobs:
           script: |
             cd ~/aplicaciones/portfolio_astro
             git pull origin main
-            docker-compose pull
-            docker-compose up -d --force-recreate
+            docker compose pull
+            docker compose up -d --force-recreate
             docker image prune -af
